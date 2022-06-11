@@ -13,8 +13,7 @@ currentStoryKey.subscribe(async (value) => {
     return null;
   }
 
-  const importedComponent = (await import(/* @vite-ignore */ `/${value}`))
-    .default;
+  const importedComponent = (await import(/* @vite-ignore */ value)).default;
 
   currentStoryElement.set(importedComponent);
 });
