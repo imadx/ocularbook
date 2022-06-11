@@ -2,6 +2,7 @@
   import { currentStoryElement } from "../store";
   import IconButton from "./IconButton.svelte";
   import ArrowExpand from "./Icons/ArrowExpand.svelte";
+  import Placeholder from "./Placeholder.svelte";
   import SectionHeading from "./SectionHeading.svelte";
 
   let element;
@@ -28,7 +29,11 @@
     {#if hasPreviewPadding}
       <SectionHeading>Preview</SectionHeading>
     {/if}
-    <svelte:component this={element} />
+    {#if element}
+      <svelte:component this={element} />
+    {:else}
+      <Placeholder>No component selected</Placeholder>
+    {/if}
   </div>
 </div>
 
