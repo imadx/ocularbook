@@ -1,13 +1,14 @@
 {
   "name": "ocularbook",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "ocularbook": "./bin/start-ocularbook.sh"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
@@ -21,5 +22,24 @@
   },
   "dependencies": {
     "sass": "^1.52.3"
-  }
+  },
+  "description": "Built with Svelte + TS + Vite + HeroIcons",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imadx/ocularbook.git"
+  },
+  "keywords": [
+    "svelte",
+    "vite",
+    "storybook",
+    "ocularbook",
+    "components"
+  ],
+  "author": "Ishan Madhusanka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imadx/ocularbook/issues"
+  },
+  "homepage": "https://github.com/imadx/ocularbook#readme"
 }

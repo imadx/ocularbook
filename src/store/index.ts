@@ -1,12 +1,20 @@
+import { getFiles } from "../utils";
 import { writable } from "svelte/store";
 
-const _stories = import.meta.glob("../../**/*.stories.svelte");
+const _stories = await getFiles();
 
-export const stories = writable([...Object.keys(_stories)]);
+export const stories = writable([..._stories]);
 
 export const currentStoryKey = writable(null);
 export const currentStoryElement = writable(null);
 
 currentStoryKey.subscribe(async (value) => {
-  currentStoryElement.set((await import(/* @vite-ignore */ value)).default);
+  if (!value) {
+    return null;
+  }
+
+  const importedComponent = (await import(/* @vite-ignore */ `/${value}`))
+    .default;
+
+  currentStoryElement.set(importedComponent);
 });
