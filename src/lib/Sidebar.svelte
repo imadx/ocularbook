@@ -3,15 +3,6 @@
   import { currentStoryKey, stories } from "../store";
   import SectionHeading from "./SectionHeading.svelte";
 
-  let storiesValue = [];
-  let currentStoryKeyValue;
-
-  stories.subscribe((value) => {
-    storiesValue = value;
-  });
-
-  currentStoryKey.subscribe((value) => (currentStoryKeyValue = value));
-
   const updateCurrentElement = (story: string) => currentStoryKey.set(story);
 
   const getFormattedStoryName = (storyName: string): string => {
@@ -21,11 +12,8 @@
       .replace(/\.stories\.svelte/i, "");
   };
 
-  // /external-stories-aimevoli/src/typography/Typography.stories.svelte
   const getFormattedTitle = (storyName: string) => {
-    return storyName
-      .replace("/external-stories-aimevoli/", "")
-      .replace(/^\//, "");
+    return storyName.replace("/external-stories-aimevoli/", "").replace(/^\//, "");
   };
 </script>
 
@@ -36,10 +24,10 @@
   </div>
 
   <ul>
-    {#each storiesValue as story}
+    {#each $stories as story}
       <li
         title={getFormattedTitle(story)}
-        class:active={currentStoryKeyValue === story}
+        class:active={$currentStoryKey === story}
         on:click={() => updateCurrentElement(story)}
       >
         {getFormattedStoryName(story)}
