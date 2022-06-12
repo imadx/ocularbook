@@ -15,7 +15,10 @@
   const updateCurrentElement = (story: string) => currentStoryKey.set(story);
 
   const getFormattedStoryName = (storyName: string): string => {
-    return storyName.split("/").slice(-1)[0];
+    return storyName
+      .split("/")
+      .slice(-1)[0]
+      .replace(/\.stories\.svelte/i, "");
   };
 </script>
 

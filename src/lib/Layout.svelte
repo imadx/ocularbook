@@ -19,8 +19,8 @@
     top: 0;
     height: 100%;
     overflow: auto;
-    min-width: 15rem;
-    width: 15rem;
+    min-width: 12rem;
+    width: 12rem;
   }
 
   .preview {
