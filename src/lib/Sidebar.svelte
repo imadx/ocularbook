@@ -20,6 +20,13 @@
       .slice(-1)[0]
       .replace(/\.stories\.svelte/i, "");
   };
+
+  // /external-stories-aimevoli/src/typography/Typography.stories.svelte
+  const getFormattedTitle = (storyName: string) => {
+    return storyName
+      .replace("/external-stories-aimevoli/", "")
+      .replace(/^\//, "");
+  };
 </script>
 
 <div class="container">
@@ -31,7 +38,7 @@
   <ul>
     {#each storiesValue as story}
       <li
-        title={story}
+        title={getFormattedTitle(story)}
         class:active={currentStoryKeyValue === story}
         on:click={() => updateCurrentElement(story)}
       >
