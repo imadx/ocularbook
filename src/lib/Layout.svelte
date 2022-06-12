@@ -19,6 +19,7 @@
     top: 0;
     height: 100%;
     overflow: auto;
+    min-width: 15rem;
     width: 15rem;
   }
 
