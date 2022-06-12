@@ -9,11 +9,15 @@
   let globalConfig;
 
   onMount(async () => {
-    const globalConfigFile = "/.ocularbook/Global.svelte";
     const existingConfigurationFiles = import.meta.glob(
-      "/.ocularbook/Global.svelte",
+      "/**/.ocularbook/Global.svelte",
     );
-    if (Object.keys(existingConfigurationFiles)) {
+
+    const existingConfigurationFilePath = Object.keys(
+      existingConfigurationFiles,
+    )?.[0];
+
+    if (!existingConfigurationFilePath) {
       log(
         "No global configurations have been defined. Create a `.ocularbook/Global.svelte` file to setup global configurations",
       );
@@ -21,7 +25,7 @@
     }
 
     globalConfig = await (
-      await import(/* @vite-ignore */ globalConfigFile)
+      await import(/* @vite-ignore */ existingConfigurationFilePath)
     ).default;
   });
 </script>
