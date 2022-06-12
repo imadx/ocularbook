@@ -19,9 +19,11 @@
   };
 </script>
 
-<div>
-  <Heading>Ocular</Heading>
-  <SectionHeading>Components</SectionHeading>
+<div class="container">
+  <Heading noMargin>Ocular</Heading>
+  <div class="sticky-header">
+    <SectionHeading noMargin>Components</SectionHeading>
+  </div>
 
   <ul>
     {#each storiesValue as story}
@@ -37,13 +39,21 @@
 </div>
 
 <style lang="scss">
-  div {
+  .container {
     background-color: #f6f6f8;
     display: flex;
     flex-direction: column;
     padding: 1rem;
     height: 100%;
     border-right: #e5e5e5 solid thin;
+    overflow: auto;
+  }
+
+  .sticky-header {
+    position: sticky;
+    top: -1rem;
+    padding: 1rem 0;
+    background-color: #f6f6f8;
   }
 
   ul {
