@@ -3,7 +3,9 @@
   import { currentStoryKey, stories } from "../store";
   import SectionHeading from "./SectionHeading.svelte";
 
-  const updateCurrentElement = (story: string) => currentStoryKey.set(story);
+  const updateCurrentElement = (story: string) => {
+    location.hash = story
+    currentStoryKey.set(story)};
 
   const getFormattedStoryName = (storyName: string): string => {
     return storyName
