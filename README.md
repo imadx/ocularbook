@@ -31,3 +31,33 @@ Add files in ending with `stories.svelte` (eg: `Counter.stories.svelte`) to your
 
 - Preview svelte files matching `*.stories.svelte`
 - Hot Module Replacement
+- Add Global Configuration via `.ocularbook/Global.svelte`
+
+#### Global configuration via Global.svelte
+
+The following is an example Global.svelte which does a few things,
+
+- Imports external resources
+- Sets the title of the page
+- Sets global CSS styles
+
+```html
+<svelte:head>
+  <!-- Updates page title -->
+  <title>Updated Title</title>
+
+  <!-- Imports external resources from the html head -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+</svelte:head>
+
+<style>
+  /* Updates global html styles */
+  :global(html) {
+    font-family: "Poppins", sans-serif;
+    background: #eee;
+    color: #201d30;
+  }
+</style>
+```

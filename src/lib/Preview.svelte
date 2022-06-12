@@ -54,6 +54,7 @@
     display: flex;
     align-items: center;
     height: $size-tools-height;
+    background-color: #f6f6f8;
   }
 
   .preview {
