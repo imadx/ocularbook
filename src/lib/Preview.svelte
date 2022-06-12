@@ -38,6 +38,14 @@
 </div>
 
 <style lang="scss">
+  .container {
+    height: 100%;
+
+    &.hasPreviewPadding {
+      height: calc(100% + 3rem);
+    }
+  }
+
   .tools {
     padding: 1rem;
     display: flex;
