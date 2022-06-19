@@ -7,41 +7,43 @@ Built with Svelte + TS + Vite + HeroIcons
 
 Freaking fast! ⚡⚡ (Thanks to Vite and Svelte)
 
+[![npm version](https://badge.fury.io/js/ocularbook.svg)](https://badge.fury.io/js/ocularbook)
+
 ### Getting started
 
 1. Install dependency from npm to your existing Svelte+Vite project
 
-    ```
-    pnpm add ocularbook
-    ```
+   ```
+   pnpm add ocularbook
+   ```
 
-    ```
-    yarn add ocularbook
-    ```
+   ```
+   yarn add ocularbook
+   ```
 
-    ```
-    npm install ocularbook
-    ```
+   ```
+   npm install ocularbook
+   ```
 
 2. Configure the ocularbook script to start Ocularbook on your project.
 
-    ```
-    npx ocularbook-configure
-    ```
+   ```
+   npx ocularbook-configure
+   ```
 
 3. Start Ocularbook
 
-    ```
-    pnpm run ocularbook
-    ```
+   ```
+   pnpm run ocularbook
+   ```
 
-    ```
-    yarn run ocularbook
-    ```
+   ```
+   yarn run ocularbook
+   ```
 
-    ```
-    npm run ocularbook
-    ```
+   ```
+   npm run ocularbook
+   ```
 
 Add files in ending with `stories.svelte` (eg: `Counter.stories.svelte`) to your project to preview them with Ocularbook
 
