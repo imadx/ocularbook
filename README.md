@@ -9,19 +9,39 @@ Freaking fast! ⚡⚡ (Thanks to Vite and Svelte)
 
 ### Getting started
 
-Install dependency from npm to your existing Svelte+Vite project
+1. Install dependency from npm to your existing Svelte+Vite project
 
-```
-pnpm add ocularbook
-```
+    ```
+    pnpm add ocularbook
+    ```
 
-```
-yarn add ocularbook
-```
+    ```
+    yarn add ocularbook
+    ```
 
-```
-npm install ocularbook
-```
+    ```
+    npm install ocularbook
+    ```
+
+2. Configure the ocularbook script to start Ocularbook on your project.
+
+    ```
+    npx ocularbook-configure
+    ```
+
+3. Start Ocularbook
+
+    ```
+    pnpm run ocularbook
+    ```
+
+    ```
+    yarn run ocularbook
+    ```
+
+    ```
+    npm run ocularbook
+    ```
 
 Add files in ending with `stories.svelte` (eg: `Counter.stories.svelte`) to your project to preview them with Ocularbook
 
