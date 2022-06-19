@@ -4,8 +4,9 @@
   import SectionHeading from "./SectionHeading.svelte";
 
   const updateCurrentElement = (story: string) => {
-    location.hash = story
-    currentStoryKey.set(story)};
+    location.hash = story;
+    currentStoryKey.set(story);
+  };
 
   const getFormattedStoryName = (storyName: string): string => {
     return storyName
@@ -73,6 +74,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
       color: #707078;
+      position: relative;
 
       &:hover {
         background-color: #d9d9d9;
@@ -80,17 +82,6 @@
 
       &.active {
         color: #494e74;
-
-        &::after {
-          $size-indicator-dot: 6px;
-
-          content: "";
-          background-color: #494e74;
-          border-radius: $size-indicator-dot;
-          width: $size-indicator-dot;
-          height: $size-indicator-dot;
-          display: inline-block;
-        }
       }
     }
   }
