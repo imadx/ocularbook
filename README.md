@@ -1,5 +1,5 @@
-> **Info**
-> The project is still in it's experimental phase.
+> **Warning**
+> The project is still in it's experimental phase. There might be missing features and the API will be subjected to changes
 
 # OcularBook for Svelte with Vite
 
