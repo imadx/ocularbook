@@ -14,7 +14,7 @@
   },
   "bin": {
     "ocularbook": "./bin/start-ocularbook.sh",
-    "ocularbook:configure": "./bin/configure-ocularbook.sh"
+    "ocularbook-configure": "./bin/configure-ocularbook.sh"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
